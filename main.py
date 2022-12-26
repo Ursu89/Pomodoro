@@ -58,10 +58,8 @@ def count_down(count):
         timer = window.after(1000, count_down, count - 1)
     else:
         start_timer()
-        marks = ""
         work_sessions = math.floor(reps/2)
-        for _ in range(work_sessions):
-            marks += "✔"
+        marks = "".join("✔" for _ in range(work_sessions))
         check_marks.config(text=marks)
 
 
